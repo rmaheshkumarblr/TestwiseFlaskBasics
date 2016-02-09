@@ -5,11 +5,14 @@ from datetime import datetime
 from flask.ext.wtf import Form
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired #, InputRequired ,Required
+from flask.ext.triangle import Triangle
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'N0tHingIsImpo5Sibl3'
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+Triangle(app)
 
 
 # Class name ( Type of Object )
